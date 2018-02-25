@@ -1,7 +1,11 @@
 const express = require('express')
 let app = express()
 
-app.use('/_api', require('./_api'))
+//	static assets
+app.use('/css', express.static('./public/css'))
+app.use('/_api', require('./interface/'))
+
+app.use('/admin', require('./main/'))
 
 app.get('/:interface/:page', (req, resp) => {
 	resp.send(`Hello, you should probs go to '${req.params.interface}' section, and find the '${req.params.page}' page.`);

@@ -5,6 +5,6 @@ let db = new Database({
 	path: './admin/warehouse.json'
 })
 
-db.save()
+db.load()
 
 module.exports = db;

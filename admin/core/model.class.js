@@ -1,13 +1,16 @@
-const db = require('./db')
+const database = require('../database')
 
 class Model {
 	constructor(name, struct) {
-		this.__model = db.model(name, struct)
+		this.__model = database.model(name, struct)
 	}
 
 	insert(data) {
-		this.__model.insert(data)
-		return this.db.save()
+		var chain = this.__model.insert(data)
+			.then(() => database.save())
+			.then(() => data)
+
+		return chain;
 	}
 
 	getID(id) {
