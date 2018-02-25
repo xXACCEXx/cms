@@ -2,7 +2,7 @@ const Database = require('warehouse')
 
 let db = new Database({
 	version: 1,
-	path: './admin/_database/data.json'
+	path: './admin/warehouse.json'
 })
 
 db.save()
