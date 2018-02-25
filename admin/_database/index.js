@@ -11,7 +11,7 @@ try {
 }
 
 catch (e) {
-	fs.writeFileSync('./data.json', '')
+	fs.writeFileSync('./admin/_database/data.json', '')
 }
 
 module.exports = connection
