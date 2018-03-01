@@ -1,0 +1,6 @@
+#main-nav {
+	.is-constrained {
+		max-height: calc(100Vh - 24px - 47px - 44px - 36px - 53px - 2em);
+		overflow: auto;
+	}
+}

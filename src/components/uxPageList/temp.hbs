@@ -1,0 +1,26 @@
+{{!-- Render a list --}}
+{{#partial renderList}}
+	{{#if .children}}
+		<ul>
+			{{#each children: i}}
+				{{>renderItem}}
+			{{/each}}
+		</ul>
+	{{/if}}
+{{/partial}}
+
+{{!-- Render an item --}}
+{{#partial renderItem}}
+	<li>
+		<a href="/admin/edit/page/{{_id}}" class-is-active="selected(_id)">{{name}}</a>
+		{{>renderList}}
+	</li>
+{{/partial}}
+
+<div class="menu">
+	<ul class="menu-list">
+		{{#with root}}
+			{{>renderItem}}
+		{{/with}}
+	</ul>
+</div>

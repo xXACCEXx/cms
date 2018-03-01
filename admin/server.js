@@ -3,6 +3,8 @@ let app = express()
 
 //	static assets
 app.use('/css', express.static('./public/css'))
+app.use('/js', express.static('./public/js'))
+app.use('/fonts', express.static('./public/fonts'))
 app.use('/_api', require('./interface/'))
 
 app.use('/admin', require('./main/'))
@@ -12,7 +14,7 @@ app.get('/:interface/:page', (req, resp) => {
 })
 
 app.get('/', (req, resp) => {
-	resp.redirect('/admin/panel')
+	resp.redirect('/admin')
 })
 
 app.get('*', (req, resp) => {

@@ -6,17 +6,38 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "browserify": {
+    "transform": [
+      "browserify-shim",
+      "ractivate"
+    ]
+  },
+  "browserify-shim": {
+    "plugin": {
+      "exports": "plugin",
+      "depends": [
+        "jquery:$"
+      ]
+    }
+  },
   "author": "Lawrence Tranter",
   "license": "ISC",
   "dependencies": {
-    "@acce/promise-fs": "0.0.4",
     "bulma": "^0.6.2",
     "express": "^4.16.2",
+    "handlebars": "^4.0.11",
+    "ractive": "^0.9.13",
+    "warehouse": "^2.2.0"
+  },
+  "devDependencies": {
+    "vinyl-source-stream": "^2.0.0",
+    "ractivate": "^0.2.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-sass": "^3.1.0",
-    "handlebars": "^4.0.11",
-    "warehouse": "^2.2.0"
+    "@acce/promise-fs": "0.0.4",
+    "browserify": "^16.1.0",
+    "browserify-shim": "^3.8.14"
   }
 }

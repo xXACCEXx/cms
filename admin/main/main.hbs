@@ -3,29 +3,24 @@
 
 <head>
 	<title>Admin interface</title>
+
 	<link type="text/css" rel="stylesheet" href="/css/main.css" />
 	<script type="text/javascript" src="/js/main.js"></script>
-
-	<div id="meta-data"></div>
 </head>
 
-<body id="page">
+<body id="page" class="container is-fluid is-invisible">
 	<header>
 		<h1>
 			<a href="/">This Page</a>
 		</h1>
 	</header>
 
-	<main>
-		<nav>
-			<ul>
-				<li>
-					<a href="/">Some content</a>
-				</li>
-			</ul>
+	<main class="columns">
+		<nav class="column is-one-quarter">
+			<uxsidebar></uxsidebar>
 		</nav>
 
-		<section class="section">
+		<section class="column">
 			<div class="field box">
 				<label class="label">Page Name</label>
 				<div class="control">
