@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "a simple cms web interface for managing website content, in any structure you like",
   "main": "index.js",
+  "bin": {
+    "create": "./gulp/clis/create/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,14 +33,16 @@
     "warehouse": "^2.2.0"
   },
   "devDependencies": {
-    "vinyl-source-stream": "^2.0.0",
-    "ractivate": "^0.2.0",
+    "@acce/promise-fs": "0.0.4",
+    "browserify": "^16.1.0",
+    "browserify-shim": "^3.8.14",
+    "commander": "^2.14.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-sass": "^3.1.0",
-    "@acce/promise-fs": "0.0.4",
-    "browserify": "^16.1.0",
-    "browserify-shim": "^3.8.14"
+    "map-stream": "0.0.7",
+    "ractivate": "^0.2.0",
+    "vinyl-source-stream": "^2.0.0"
   }
 }
