@@ -1,4 +1,4 @@
-const Model = require('../core/model.class')
+const Model = require('../classes/model')
 
 class Interface extends Model {
 	constructor() {
