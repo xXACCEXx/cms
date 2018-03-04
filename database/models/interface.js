@@ -1,16 +1,11 @@
-const Model = require('../model.class')
+const createModel = require('../create-model')
 
-class Interface extends Model {
-	constructor() {
-		super('interfaces', {
-			name: String,
-			created: { type: Date, default: Date.now }
-		})
-	}
+module.exports = createModel({
+	name: 'interfaces',
+	struct: {
+		name: String,
+		created: { type: Date, default: Date.now }
+	},
 
-	findName(name) {
-		return this.find({ name: name })
-	}
-}
-
-module.exports = new Interface()
+	findName: name => this.model({ name: name })
+})
