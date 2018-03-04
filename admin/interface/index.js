@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const interface = require('./interface.model')
+const interface = require('../../database/models/interface')
 
 router.all('/', (req, resp) => {
 	resp.send('API Home Page')
@@ -11,7 +11,7 @@ router.route('/interface/list')
 		resp.json(names)
 	})
 
-router.route('/interface/:name/')
+router.route('/interface/:name')
 	.post((req, resp, next) => {
 		interface.insert({ name: req.params.name })
 			.then(interface => resp.json({ ok: true, data: interface }))
