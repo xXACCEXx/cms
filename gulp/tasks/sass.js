@@ -7,7 +7,7 @@ const source = require('vinyl-source-stream')
 gulp.task('sass', () => {
 	gulp.src([
 		'./src/sass/*.scss',
-		'./src/components/**/style.scss'
+		'./src/components/**/*.scss'
 	])
 		.pipe(sass({ style: 'expanded', includePaths: ['./node_modules/bulma', './src/icons'] }))
 		.pipe(prefix('last 2 versions'))

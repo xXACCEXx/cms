@@ -1,0 +1,11 @@
+{
+	"components": [
+		{
+			"name": "uxSideBar",
+			"opts": {
+				"style": true,
+				"temp": true
+			}
+		}
+	]
+}
