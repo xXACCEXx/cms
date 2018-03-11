@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const interface = require('../../database/models/interface')
+const interface = require('./model.js')
 
 router.all('/', (req, resp) => {
 	resp.send('API Home Page')

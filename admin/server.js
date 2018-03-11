@@ -5,13 +5,9 @@ let app = express()
 app.use('/css', express.static('./public/css'))
 app.use('/js', express.static('./public/js'))
 app.use('/fonts', express.static('./public/fonts'))
-app.use('/_api', require('./interface/'))
 
-app.use('/admin', require('./pages/admin/pages'))
 
-// app.get('/:interface/:page', (req, resp) => {
-// 	resp.send(`Hello, you should probs go to '${req.params.interface}' section, and find the '${req.params.page}' page.`);
-// })
+app.use('/', require('./pages/route.js'))
 
 app.get('/', (req, resp) => {
 	resp.redirect('/admin/pages')

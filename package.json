@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "a simple cms web interface for managing website content, in any structure you like",
   "main": "index.js",
+  "directories": {
+    "database": "./database"
+  },
   "bin": {
     "create": "./gulp/clis/create/index.js"
   },
