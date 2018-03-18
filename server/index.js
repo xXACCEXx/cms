@@ -7,10 +7,10 @@ app.use('/js', express.static('./public/js'))
 app.use('/fonts', express.static('./public/fonts'))
 
 
-app.use('/', require('./pages/route.js'))
+app.use('/', require('./pages/route'))
 
 app.get('/', (req, resp) => {
-	resp.redirect('/admin/pages')
+	resp.redirect('/admin/elements')
 })
 
 app.get('*', (req, resp) => {

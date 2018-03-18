@@ -2,7 +2,7 @@ const Database = require('warehouse')
 
 let db = new Database({
 	version: 1,
-	path: './database/warehouse.json'
+	path: './server/warehouse.json'
 })
 
 db.load()

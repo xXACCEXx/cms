@@ -1,4 +1,4 @@
-const db = require('../../../database')
+const db = require('../../../db')
 const { Schema } = db
 
 const schema = new Schema({
